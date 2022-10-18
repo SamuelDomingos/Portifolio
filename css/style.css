@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .container{
     max-width: 1200px;
     padding: 0 2%;
@@ -45,30 +49,53 @@
 
 header{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(../images/background-gd1f95bc17_1920.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
 }
 
-.menu{
-    padding: 1.2em;
+header .container > i{
+    color: white;
+    font-size: 2.5em;
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    animation: move 1.5s infinite;
+}
+
+@keyframes move{
+    0%{
+        top: 84%;
+    }
+
+    50%{
+        top: 82%;
+    }
+
+    100%{
+        top: 84%;
+    }
 }
 
 .logo-menu i{
+    padding: 0.5em;
     font-size: 4em;
     color: #2596be;
     list-style-type: none;
 }
 
-.menu-links{
-    display: flex;
-    justify-content: flex-end;
+.menu-desktop{
+    padding: 1.2em;
 }
 
-.menu-links nav ul{
+.menu-desktop .menu-links{
+    display: flex;
+    justify-content: right;
+}
+
+.menu-desktop .menu-links nav ul{
     display: flex;
     align-items: center;
     list-style: none;
@@ -93,9 +120,116 @@ header{
     border-bottom: 5px solid #042235;
 }
 
-.menu-titulo{
-    padding-top: 6em;
+.menu-redes_social ul li{
+    list-style-type: none;
+}
+
+.menu-redes_social ul li a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #2596be;
+}
+
+.menu-desktop .menu-redes_social{
     position: absolute;
+    right: 5rem;
+    top: 35vh;
+}
+
+.menu-desktop .menu-redes_social ul li{
+    padding-bottom: 40px;
+}
+
+.menu-desktop .menu-redes_social ul li a{
+    padding: .2em .3em;
+    border: 2px solid #2596be;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.menu-desktop .menu-redes_social ul li a:hover{
+    color: #c1e6e6;
+    border: 2px solid #c1e6e6;
+}
+
+.menu-mobile-container button{
+    position: fixed;
+    z-index: 100;
+    right: 3em;
+    top: 3.5em;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    transition: 0.7s;
+}
+
+.menu-mobile-container button span{
+    color: #fff;
+    position: relative;
+    bottom: 9px;
+    right: 9px;
+    padding-left: 10px;
+}
+
+.menu-mobile-container button.opague{
+    background-color: #000;
+    padding: 0.5em;
+}
+
+.menu-mobile-container button i{
+    font-size: 2.5em;
+    color: #007cb6;
+}
+
+.menu-mobile{
+    width: 40%;
+    height: 100%;
+    padding: 1em;
+    position: fixed;
+    z-index: 99999;
+    right: -40%;
+    top: 0;
+    background: #0c0c0c;
+    transition: 0.5s;
+}
+
+.menu-mobile.show {
+    right: 0;
+}
+
+.menu-mobile h2{
+    font-size: 15px;
+    color: #008ed1;
+    text-align: left;
+}
+
+.menu-mobile h2 span{
+    float: right;
+    font-size: 20px;
+}
+
+.menu-mobile .menu-links{
+    text-align: left;
+}
+
+.menu-mobile .menu-links nav{
+    margin-top: -15em;
+}
+
+.menu-mobile .menu-links nav ul li{
+    margin: 1em 0;
+    font-size: 20px;
+}
+
+.menu-mobile .menu-redes_social ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.menu-titulo{
+    padding-top: 5em;
     max-width: 700px;
 }
 
@@ -109,38 +243,12 @@ header{
     font-size: 60px;
 }
 
-.menu-redes_social{
-    position: absolute;
-    right: 5rem;
-    top: 35vh;
-}
-
-.menu-redes_social ul li{
-    padding-bottom: 40px;
-    list-style-type: none;
-}
-
-.menu-redes_social ul li a{
-    text-decoration: none;
-    font-size: 1.5em;
-    color: #2596be;
-    padding: .2em .3em;
-    border: 2px solid #2596be;
-    border-radius: 50px;
-    transition: 0.5s;
-}
-
-.menu-redes_social ul li a:hover{
-    color: #c1e6e6;
-    border: 2px solid #c1e6e6;
-}
-
 /********/
 
 section.Sobre{
     background-color: #2596be;
     padding: 60px 0;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -232,11 +340,14 @@ section.conhecimento .conhecimento-titulo{
 
 .conhecimento-tecnologias .conhecimentos-icons{
     padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .conhecimento-tecnologias .conhecimentos-icons .w3{
     padding: 1em 3em;
-    margin: 0 30px;
+    margin: 20px 30px;
     -webkit-box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
     -moz-box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
     box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
@@ -578,4 +689,51 @@ footer .direto-autoral p{
 footer .direto-autoral p span{
     color: #008ed1;
     margin: 0 10px;
+}
+
+@media screen and (max-width: 760px) {
+
+    .menu-desktop{
+        display: none;
+    }
+
+    .menu-titulo{
+        padding-top: 0;
+        padding-bottom: 2em;
+    }
+        
+    .menu-titulo p{
+        color: #307299;
+        font-size: 20px;
+    }
+
+    .menu-titulo h1{
+        color: #fff;
+        font-size: 50px;
+    }
+        
+    .flex{
+        flex-direction: column;
+    }
+
+    .conhecimento-tecnologias .conhecimentos-icons .w3{
+        padding: 1em 3em;
+        margin: 2.5em auto;
+        max-width: 400px;
+    }
+
+    .contagem-numericas p{
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+        width: 20%;
+        padding: 1em 0;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+    
+    .contagem-numericas .contagens{
+        padding: 2.5em 5em;
+        border-left: none;
+        border-right: none;
+    }
 }

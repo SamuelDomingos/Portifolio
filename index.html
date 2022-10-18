@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -18,29 +19,103 @@
     <header>
         <div class="container">
 
-            <div class="menu flex">
+            <div class="logo-menu">
+                <i class="fa-solid fa-code"></i>
+            </div>
 
-                <div class="logo-menu">
-                    <i class="fa-solid fa-code"></i>
-                </div>
+            <div class="menu-desktop flex">
 
                 <div class="menu-links">
                     <nav>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Sobre</a></li>
-                            <li><a href="#">Projetos</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#conhecimentos">Conhecimentos</a></li>
+                            <li><a href="#trabalhos">trabalhos</a></li>
+                            <li><a href="#contato">Contato</a></li>
                         </ul>
                     </nav>
                 </div>
 
+                <div class="menu-redes_social">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
+            <div class="menu-mobile-container">
 
-            <div data-aos="fade-up"    data-aos-duration="1500"
+            <button><span>MENU</span><i class="fa-solid fa-bars"></i></button>
+
+            <div class="menu-mobile flex">
+
+                <h2>NAVEGAÇÃO <span><i class="fa-solid fa-xmark"></i></span></h2>
+
+                <div class="menu-links">
+                    <nav>
+                        <ul>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#conhecimentos">Conhecimentos</a></li>
+                            <li><a href="#trabalhos">trabalhos</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="menu-redes_social">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div 
                 class="menu-titulo">
-                <p>WELCOME TO GLINT</p>
+                <p>WELCOME TO GLINT</p>     
                 <h1>
                     We are a creative group
                     of people who design
@@ -49,37 +124,12 @@
                 </h1>
             </div>
 
-
-            <div class="menu-redes_social">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <i class="fa-solid fa-arrow-down"></i>
 
         </div><!--container-->
     </header>
 
-    <section class="Sobre">
+    <section id="sobre" class="Sobre">
         <div class="container">
 
             <div data-aos="fade-up"    data-aos-duration="1500" class="sobre-titulo">
@@ -114,7 +164,7 @@
         </div><!--container-->
     </section>
 
-    <section class="conhecimento">
+    <section id="conhecimentos" class="conhecimento">
         <div class="container">
 
             <div data-aos="fade-up"    data-aos-duration="1500" class="conhecimento-titulo">
@@ -240,7 +290,7 @@
         </div><!--container-->
     </section>
 
-    <section class="trabalhos">
+    <section id="trabalhos" class="trabalhos">
 
         <div class="titulo-texto">
             <p>Trabalhos Recentes,</p>
@@ -283,7 +333,7 @@
 
     </section>
 
-    <section class="contato">
+    <section id="contato" class="contato">
         <div class="container">
 
             <div class="titulo-texto">
@@ -364,7 +414,6 @@
     <script src="js/slick.js"></script>
     <script src="js/aos.js"></script>
 
-
     <script>
 
         $(document).ready(function(){
@@ -381,8 +430,33 @@
                 draggable: false,
             });
 
+            var button = $(".menu-mobile-container button");
+            var buttonI = $(".menu-mobile-container button i");
+            var menu = $('.menu-mobile');
+            var RemoveMenu = $('.menu-mobile h2 span');
+            var buttonBackground = $('section#sobre');
 
+            var sectionTop = buttonBackground.offset.top;
 
+            button.click(function () { 
+                menu.addClass('show');
+            });
+
+            RemoveMenu.click(function () { 
+                menu.removeClass('show');
+            });
+
+            $(document).on('scroll', function () {
+                
+                if ($(window).scrollTop() > 300) {
+                    button.addClass('opague');
+                }
+
+                if ($(window).scrollTop() < 300) {
+                    button.removeClass('opague')
+                }
+
+            });
         });
 
 
