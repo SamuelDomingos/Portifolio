@@ -5,13 +5,40 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/*#5d17eb*/
+
+/*#8c52f6*/
+
 html{
     scroll-behavior: smooth;
+}
+
+html, body{
+    height: 100%;
 }
 
 .container{
     max-width: 1200px;
     padding: 0 2%;
+    margin: 0 auto;
+}
+
+
+.titulo-texto .container{
+    max-width: 800px;
+}
+
+.titulo-texto p{
+    font-size: 30px;
+    color: #8c52f6;
+}
+
+.titulo-texto h1{
+    font-size: 3em;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-top: 10px;
+    padding-bottom: 20px;
     margin: 0 auto;
 }
 
@@ -45,49 +72,60 @@ html{
     border-bottom: 1px solid #000;
 }
 
+::-webkit-scrollbar{
+    background-color: #10121f;
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #5d17eb;
+}
+
 /*********/
 
 header{
     width: 100%;
     min-height: 100vh;
-    background-image: url(../images/background-gd1f95bc17_1920.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #10121f;
 }
 
 header .container > i{
-    color: white;
+    color: #Fff;
     font-size: 2.5em;
     position: absolute;
-    top: 82%;
+    bottom: 5%;
     left: 50%;
-    animation: move 1.5s infinite;
+    animation: move 1.4s infinite;
 }
 
 @keyframes move{
     0%{
-        top: 84%;
+        bottom: 5%;
     }
 
     50%{
-        top: 82%;
+        bottom: 7%;
     }
 
     100%{
-        top: 84%;
+        bottom: 5%;
     }
 }
 
 .logo-menu i{
     padding: 0.5em;
     font-size: 4em;
-    color: #2596be;
+    color: #8c52f6;
     list-style-type: none;
 }
 
 .menu-desktop{
+    line-height: 50px;
     padding: 1.2em;
+}
+
+.menu-mobile-container{
+    display: none;
 }
 
 .menu-desktop .menu-links{
@@ -110,13 +148,13 @@ header .container > i{
 
 .menu-links nav ul li a{
     padding: .6em;
-    color: #5ca2b5;
+    color: #8c52f6;
     text-decoration: none;
     transition: 0.5s;
 }
 
 .menu-links nav li a:hover{
-    color: #c1e6e6;
+    color: #059b9a;
     border-bottom: 5px solid #042235;
 }
 
@@ -127,7 +165,7 @@ header .container > i{
 .menu-redes_social ul li a{
     text-decoration: none;
     font-size: 1.5em;
-    color: #2596be;
+    color: #8c52f6;
 }
 
 .menu-desktop .menu-redes_social{
@@ -137,19 +175,19 @@ header .container > i{
 }
 
 .menu-desktop .menu-redes_social ul li{
-    padding-bottom: 40px;
+    padding-bottom: 1px;
 }
 
 .menu-desktop .menu-redes_social ul li a{
     padding: .2em .3em;
-    border: 2px solid #2596be;
+    border: 2px solid #8c52f6;
     border-radius: 50px;
     transition: 0.5s;
 }
 
 .menu-desktop .menu-redes_social ul li a:hover{
-    color: #c1e6e6;
-    border: 2px solid #c1e6e6;
+    color: #fff;
+    border: 2px solid #fff;
 }
 
 .menu-mobile-container button{
@@ -164,7 +202,7 @@ header .container > i{
 }
 
 .menu-mobile-container button span{
-    color: #fff;
+    color: #8c52f6;
     position: relative;
     bottom: 9px;
     right: 9px;
@@ -178,18 +216,18 @@ header .container > i{
 
 .menu-mobile-container button i{
     font-size: 2.5em;
-    color: #007cb6;
+    color: #8c52f6;
 }
 
 .menu-mobile{
-    width: 40%;
+    width: 50%;
     height: 100%;
     padding: 1em;
     position: fixed;
     z-index: 99999;
-    right: -40%;
+    right: -50%;
     top: 0;
-    background: #0c0c0c;
+    background: #8c52f6;
     transition: 0.5s;
 }
 
@@ -199,7 +237,7 @@ header .container > i{
 
 .menu-mobile h2{
     font-size: 15px;
-    color: #008ed1;
+    color: #0ff;
     text-align: left;
 }
 
@@ -221,83 +259,103 @@ header .container > i{
     font-size: 20px;
 }
 
+.menu-mobile .menu-links nav ul li a{
+    color: #fff;
+}
+
 .menu-mobile .menu-redes_social ul{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
+.menu-mobile .menu-redes_social ul a{
+    color: #fff;
+}
 
 .menu-titulo{
-    padding-top: 5em;
+    padding-top: 1em;
     max-width: 700px;
 }
 
 .menu-titulo p{
-    color: #307299;
-    font-size: 20px;
+    color: #8c52f6;
+    font-size: 4vh;
 }
 
 .menu-titulo h1{
     color: #fff;
-    font-size: 60px;
+    font-size: 10vh;
 }
 
 /********/
 
+section.Sobre .wave{
+    background-image: url(../images/wave.svg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    margin-top: -4em;
+}
+
 section.Sobre{
-    background-color: #2596be;
+    background-color: #8c52f6;
     padding: 60px 0;
     min-height: 100vh;
     text-align: center;
 }
 
 section.Sobre .bottom-border{
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #Fff;
 }
 
 section.Sobre .sobre-titulo{
-    padding: 40px 0;
+    padding: 2em 0;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 1em;
 }
 
 section.Sobre .sobre-titulo p{
     font-size: 30px;
+    color: #fff;
 }
 
 section.Sobre .sobre-titulo h1{
     font-size: 60px;
-    color: #fff;
+    color: #0fff;
 }
 
 section.Sobre .sobre-texto_principal{
+    color: #fff;
     max-width: 1000px;
     margin: 0 auto;
+    align-items: center;
 }
 
-.contagem-numericas{
-    margin-top: 5em;
-    justify-content: space-evenly;
+section.Sobre .sobre-texto_principal h1{
+    flex: 30%;
+    text-align: left;
 }
 
-
-.contagem-numericas h1{
-    font-size: 60px;
-    color: #fff;
+.sobre-perfil{
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 1.5em;
+    margin-top: 3em;
 }
 
-.contagem-numericas p{
-    font-size: 20px;
-    font-weight: bold;
+.sobre-perfil img{
+    width: 100%;
+    animation: icons-espe1 4s infinite;
+    transition: 0.5s;
+    cursor: pointer;
+    height: 100%;
 }
 
-.contagem-numericas .contagens{
-    padding: 0 5em;
-    border-left: 1px solid #fff;;
-    border-right: 1px solid #fff;
+.sobre-perfil img:hover{
+    transform: scale(1.1);
 }
-
 /********/
 
 section.conhecimento{
@@ -305,8 +363,8 @@ section.conhecimento{
 }
 
 section.conhecimento .container > h1{
-    font-size: 35px;
-    color: #307299;
+    font-size: 5vh;
+    color: #8c52f6;
     padding: .9em 0;
     text-align: center;
 }
@@ -318,13 +376,13 @@ section.conhecimento .conhecimento-titulo{
 }
 
 .conhecimento-titulo p{
-    font-size: 30px;
-    color: #2596be;
+    font-size: 4vh;
+    color: #8c52f6;
 }
 
 .conhecimento-titulo h1{
     font-size: 60px;
-    color: #000;
+    color: #0c0636;
     padding-bottom: 10px;
 }
 
@@ -334,7 +392,7 @@ section.conhecimento .conhecimento-titulo{
 
 .conhecimento-tecnologias > h1{
     font-size: 35px;
-    color: #307299;
+    color: #8c52f6;
     padding: .9em 0;
 }
 
@@ -348,27 +406,27 @@ section.conhecimento .conhecimento-titulo{
 .conhecimento-tecnologias .conhecimentos-icons .w3{
     padding: 1em 3em;
     margin: 20px 30px;
-    -webkit-box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
-    -moz-box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
-    box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
+    -webkit-box-shadow: 0px 0px 30px -12px #5d17eb;
+    -moz-box-shadow: 0px 0px 30px -12px r#5d17eb;
+    box-shadow: 0px 0px 30px -12px #5d17eb;
     border-radius: 20px;
     transition: 0.5s;
 }
 
 .conhecimentos-icons .w3:hover{
     color: #fff;
-    background-color: #307299;
+    background-color: #5d17eb;
 }
 
 .conhecimentos-icons .w3 i{
     font-size: 2.5em;
-    color: #2596be;
+    color: #5d17eb;
     padding: .5em 0;
     transition: 0.5s;
 }
 
 .conhecimentos-icons .w3:hover i{
-    transform: scale(1.5);
+    transform: scale(1.2);
     color: #fff;
 }
 
@@ -376,185 +434,143 @@ section.conhecimento .conhecimento-titulo{
     padding-top: 10px;
 }
 
-.conhecimento-especialidades{
-    margin: 2em 0;
-    width: 100%;
-}
-
-.conhecimento-especialidades .especialidades-texto h1{
-    font-size: 30px;
-    padding: .5em;
-}
-
-.conhecimento-especialidades .especialidades-texto p{
-    font-size: 20px;
-    font-weight: bold;
-    width: 90%;
-}
-
-.conhecimento-especialidades .slick-icons{
-    width: 30%;
-}
-
-.slick-icons .especialidades-icons{
-    overflow: hidden;
-}
-
-.slick-icons .especialidades-icons div{
-    width: 300px;
-    text-align: center;
-    display: inline-block;
-}
-
-.slick-icons .especialidades-icons i{
-    font-size: 200px;
-}
-
-.especialidades-icons p{
-    font-size: 19px;
-    margin-top: 5px;
-    font-weight: bold;
-}
-
-/****/
-i.fa-html5{
-    color: #e56027;
-}
-
-i.fa-css3-alt{
-    color: #008ed1;
-}
-
-i.fa-js{
-    color: #ead41c;
-}
-
-i.fa-bootstrap{
-    color: #8311f2;
-}
-
-i.fa-react{
-    color: #5ccfee;
-}
-/****/
-
-.conhecimento-especialidades .icons-sobre{
-    width: 100%;
-    margin: 5em 0;
+.conhecimento-especialidades .icons-especialidades{
+    max-width: 900px;
+    margin: 0 auto;
+    flex-direction: initial;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-.icons-sobre .icons-sobre-texto{
-    width: calc((100% / 3) - 55px);
-    text-align: center;
-    margin-bottom: 3em;
-    padding: 1em 1em;
-    -webkit-box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
-    -moz-box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
-    box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
-    border-radius: 20px;
+.icons-especialidades i{
+    max-width: 200px;
+    font-size: 4em;
+    margin: 1em 0;
+    background-color: #10121f;
+    color: #8c52f6;
+    padding: .3em .4em;
     transition: 0.5s;
 }
 
-.icons-sobre-texto:hover{
-    color: #fff;
-    background-color: #307299;
+.icons-especialidades i:hover{
+    transform: scale(1.1);
 }
 
-.icons-sobre-texto i{
-    font-size: 5em;
-    transition: 0.5s;
+.icons-especialidades i:nth-child(2n){
+    animation: icons-espe1 4s infinite;
 }
 
-.icons-sobre-texto:hover > i{
-    transform: scale(1.2);
+.icons-especialidades i:nth-child(2n-1){
+    animation: icons-espe2 5s infinite;
 }
 
-.icons-sobre-texto h1{
-    margin: 10px 0;
+
+@keyframes icons-espe1{
+
+    0%{
+        border-radius: 46% 54% 65% 35% / 45% 69% 31% 55% ;
+    }
+
+    50%{
+        border-radius: 27% 73% 28% 72% / 70% 30% 70% 30% ;
+    }
+
+    75%{
+        border-radius: 77% 23% 49% 51% / 34% 77% 23% 66% ;
+    }
+
+    100%{
+        border-radius: 46% 54% 65% 35% / 45% 69% 31% 55% ;
+    }
 }
 
+@keyframes icons-espe2{
+    0%{
+        border-radius: 46% 54% 24% 76% / 72% 26% 74% 28%;
+    }
+
+    50%{
+        border-radius: 77% 23% 49% 51% / 34% 77% 23% 66%;
+    }
+
+    75%{
+        border-radius: 27% 73% 28% 72% / 70% 30% 70% 30% ;
+    }
+
+    100%{
+        border-radius: 46% 54% 24% 76% / 72% 26% 74% 28% ;
+    }
+}
 /********/
 
 section.trabalhos .titulo-texto{
+    width: 100%;
+    height: 70vh;
     text-align: center;
-    padding: 9em;
-    background-color: rgb(20, 20, 20);
-}
-
-.titulo-texto p{
-    font-size: 30px;
-    color: #2596be;
-}
-
-.titulo-texto h1{
-    font-size: 60px;
-    color: #fff;
-    border-bottom: 1px solid #fff;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    width: 90%;
-    margin: 0 auto;
+    padding-top: 4em;
+    background-color: #10121f;
 }
 
 .trabalhos-projetos{
     margin: 0 auto;
     width: 100%;
-    margin-top: -150px;
+    margin-top: -7em;
 }
 
 .trabalhos-projetos .projeto{
     background-color: #000;
-    margin: 3em 2em;
-    height: 290px;
+    margin: 2em 1.5em;
+    height: 190px;
     transition: 0.5s;
     cursor: pointer;
     position: relative;
 }
 
-.projeto i{
-    left: 48%;
-    top: 45%;
+.projeto .projeto-icons{
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
     display: none;
-    font-size: 2.5em;
     position: absolute;
     transition: 0.5s;
 }
 
-.projeto:hover{
-    transform: scale(1.05);
-    -webkit-box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
-    -moz-box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
-    box-shadow: 0px 0px 52px -12px rgba(37,150,190,1);
-    filter: brightness(70%);
+.projeto .projeto-icons i{
+    font-size: 1.8em;
+    color: #5d17eb;
+    margin: 0 .2em;
 }
 
-.projeto:hover i{
-    color: #2596be;
+.projeto:hover > .projeto-icons{
     display: inline;
 }
 
+.projeto:hover > img{
+    transform: scale(1.01);
+    -webkit-box-shadow: 0px 0px 30px -12px #5d17eb;
+    -moz-box-shadow: 0px 0px 30px -12px r#5d17eb;
+    box-shadow: 0px 0px 30px -12px #5d17eb;
+    filter: brightness(80%);
+}
+
 .projeto img{
+    transition: 0.5s;
     margin: 0 auto;
     width: 100%;
     height: 100%;
 }
 
-/******/
+/********/
 
 section.contato{
-    background-color: rgb(20, 20, 20);
+    background-color: #10121f;
     padding: 8em 0;
     text-align: center;
 }
 
-section.contato p{
-    color: #2596be;
-}
-
 .form{
     width: 80%;
-    height: 650px;
     margin: 0 auto;
     margin-top: 3em;
 }
@@ -593,6 +609,7 @@ section.contato p{
     height: 200px;
     font-size: 1em;
     padding: 10px;
+    resize: none;
     background: transparent;
     outline: none;
     border: 0;
@@ -602,7 +619,8 @@ section.contato p{
 }
 
 .form form input[type=submit]{
-    background-color: #008ed1;
+    background-color: #8c52f6;
+    border: 0;
     color: #fff;
     font-size: 1.1em;
     cursor: pointer;
@@ -610,21 +628,19 @@ section.contato p{
 }
 
 .form form input[type=submit]:hover{
-    background-color: #007cb6;
+    background-color: #5d17eb;
 }
 
 .form form input:focus,
 .form form textarea:focus{
-    border-bottom: 1px solid #008ed1;
+    border-bottom: 1px solid #8c52f6;
 }
 
 .form .form-contato{
-    float: right;
     text-align: left;
     width: 40%;
-    height: 100%;
     padding: 20px;
-    background-color: rgb(6, 6, 6);
+    background-color: #5d17eb;
 }
 
 .form .form-contato > h1{
@@ -638,16 +654,16 @@ section.contato p{
 }
 
 .form-contato-texto h1{
-    color: #007cb6;
+    color: #0ff;
     padding-bottom: 15px;
 }
 
 .form-contato-texto p{
-    color: #777 !important;
+    color: #fff !important;
 }
 
 .form-contato-texto p span{
-    color: #008ed1;
+    color: #0ff;
 }
 
 .form .form-contato-link{
@@ -657,12 +673,11 @@ section.contato p{
 
 .form-contato-link a i{
     font-size: 1.5em;
-    color: #008ed1;
+    color: #0ff;
     transition: 0.2s;
 }
 
 .form-contato-link a i:hover{
-    color: #2596be;
     transform: scale(1.2);
 }
 
@@ -672,7 +687,6 @@ section.contato p{
 }
 
 footer{
-    padding: 4em;
     background-color: rgb(13, 13, 13);
 }
 
@@ -687,7 +701,7 @@ footer .direto-autoral p{
 }
 
 footer .direto-autoral p span{
-    color: #008ed1;
+    color: #8c52f6;
     margin: 0 10px;
 }
 
@@ -697,43 +711,88 @@ footer .direto-autoral p span{
         display: none;
     }
 
+    .menu-mobile-container{
+        display: inline;
+    }
+
     .menu-titulo{
         padding-top: 0;
         padding-bottom: 2em;
     }
-        
-    .menu-titulo p{
-        color: #307299;
-        font-size: 20px;
-    }
 
     .menu-titulo h1{
-        color: #fff;
-        font-size: 50px;
+        font-size: 8.5vw;
     }
         
     .flex{
         flex-direction: column;
     }
 
-    .conhecimento-tecnologias .conhecimentos-icons .w3{
-        padding: 1em 3em;
-        margin: 2.5em auto;
-        max-width: 400px;
+    /********/
+    
+    .icons-sobre .icons-sobre-texto{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 3em;
+        padding: 1em 1em;
     }
 
-    .contagem-numericas p{
-        font-size: 20px;
-        border-bottom: 1px solid #ccc;
-        width: 20%;
-        padding: 1em 0;
+    .conhecimento-especialidades{
+        text-align: center;
         margin: 0 auto;
-        font-weight: bold;
     }
     
-    .contagem-numericas .contagens{
-        padding: 2.5em 5em;
-        border-left: none;
-        border-right: none;
+    .icons-especialidades i{
+        flex: 30%;
+        font-size: 5em;
+        padding: .4em 0;
     }
+
+    /********/
+
+        
+    .titulo-texto p{
+        font-size: 3.5vh;
+    }
+
+    .titulo-texto h1{
+        font-size: 7vh;
+    }
+
+    .trabalhos-projetos{
+        width: 100%;
+    }
+    
+    .trabalhos-projetos .projeto{
+        background-color: #000;
+        margin: 2em auto;
+        width: 80%;
+        max-width: 400px;
+        transition: 0.5s;
+        cursor: pointer;
+        position: relative;
+    }
+
+    /********/
+
+    .form form,
+    .form .form-contato{
+        width: 100%;
+    }
+
+    .form .form-contato-link{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .menu-titulo h1{
+        font-size: 10vw;
+    }
+
+    .icons-especialidades i{
+        flex: 35%;
+    }
+
 }
