@@ -1,0 +1,23 @@
+.alert{
+    display: none;
+}
+
+.alertRed{
+    font-size: 1.2em;
+    background-color: #ff0000;
+    color: #fff;
+    padding: .3em .7em;
+    border-radius: 8px;
+    width: 50%;
+    margin: 1em auto;
+}
+
+.alertSucess{
+    font-size: 1.2em;
+    background-color: #108410;
+    color: #fff;
+    border-radius: 8px;
+    padding: .3em .7em;
+    width: 50%;
+    margin: 1em auto;
+}

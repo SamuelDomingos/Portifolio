@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
 
+    <link rel="stylesheet" href="css/Alert.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Portifolio</title>
@@ -41,23 +43,12 @@
                     <div class="menu-redes_social">
                         <ul>
                             <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </a>
-                            </li>
-        
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                                <a href="https://www.linkedin.com/in/samuel-domigos-304b461a8/">
                                     <i class="fa-brands fa-linkedin"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="https://github.com/SamuelDomingos/Portifolio">
                                     <i class="fa-brands fa-github"></i>
                                 </a>
                             </li>
@@ -88,23 +79,12 @@
                     <div class="menu-redes_social">
                         <ul>
                             <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </a>
-                            </li>
-        
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                                <a href="https://www.linkedin.com/in/samuel-domigos-304b461a8/">
                                     <i class="fa-brands fa-linkedin"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="https://github.com/SamuelDomingos/Portifolio">
                                     <i class="fa-brands fa-github"></i>
                                 </a>
                             </li>
@@ -143,7 +123,7 @@
             </div>
 
             <div data-aos="fade-up"    data-aos-duration="1500" class="sobre-texto_principal flex">
-                <h1>Ola sou Francisco Samuel Cripim Domingos, tenho 17 anos, estou cursando o 3° ano do ensino médio e sou um jovem, com conhecimento em programação, que busca a oportunidade de primeiro trabalho, aonde consiga colocar em pratica todos os meus conhecimentos adquiridos, visando tanto o crescimento pessoal quanto o crescimento da empresa.</h1>
+                <h1>Ola sou Francisco Samuel Cripim Domingos, tenho 17 anos, com o ensino médio completo, conhecimento em programação, que busca a oportunidade de primeiro trabalho na area da programação Front-End, aonde consiga colocar em pratica todos os meus conhecimentos adquiridos, visando tanto o crescimento pessoal quanto o crescimento da empresa.</h1>
 
                 <div class="sobre-perfil"><img src="images/perfil.jpg" alt="">
                 </div>
@@ -155,7 +135,7 @@
         <div class="container">
 
             <div data-aos="fade-up"    data-aos-duration="1500" class="conhecimento-titulo">
-                <p>Conhecimento que temos</p>
+                <p>Conhecimento que tenho</p>
                 <h1>O projeto que você precisa para lançar e expandir seus negócios</h1>
                 <div class="bottom-border"></div>
             </div>
@@ -303,17 +283,22 @@
                 </div>
             </div>
 
+            <div id="mensagem" class="alert">
+                
+            </div>
+
             <div class="form flex">
+
                 <form action="">
                     <h2>ENVIE UMA MENSAGEM</h2>
 
-                    <input type="text" name="nome" id="nome" placeholder="Seu Nome">
+                    <input type="text" name="nome" id="nome" placeholder="Seu Nome*">
 
-                    <input type="email" name="email" id="email" placeholder="Seu Email">
+                    <input type="email" name="email" id="email" placeholder="Seu Email*">
 
                     <input type="tel" name="telefone" id="telefone" placeholder="Telefone">
 
-                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem"></textarea>
+                    <textarea name="mensagem" id="mensagem" placeholder="Mensagem*"></textarea>
 
                     <input type="submit" value="Enviar">
                 </form>
@@ -323,29 +308,21 @@
 
                     <div class="form-contato-texto">
                         <h1>Envie um e-mail</h1>
-                        <p>fsdomingoss09@gmail.com</p>
+                        <a href="mailto:fsdomingoss09@gmail.com">fsdomingoss09@gmail.com</a>
                     </div>
 
                     <div class="form-contato-texto">
-                        <h1>Ligue para nós</h1>
-                        <p><span>Celular:</span> (85) 996153409</p>
+                        <h1>Ligue para mim</h1>
+                        <a href='tel:996153409'><span>Celular:</span> (85) 996153409</a>
                     </div>
 
                     <div class="form-contato-link">
 
-                        <a href="#">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-
-                        <a href="#">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/samuel-domigos-304b461a8/">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
 
-                        <a href="#">
+                        <a href="https://github.com/SamuelDomingos/Portifolio">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </div>
@@ -371,7 +348,6 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="js/slick.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/jquery.countTo.js"></script>
 
@@ -385,7 +361,6 @@
             var menu = $('.menu-mobile');
             var RemoveMenu = $('.menu-mobile h2 span');
             var buttonBackground = $('section#sobre');
-            var numeros = $('.contagem-numericas h1.timer')
 
             var sectionTop = buttonBackground.offset.top;
 
@@ -409,7 +384,40 @@
 
             });
 
-            numeros.countTo();
+            $('section.contato form').submit( () => { 
+                const nome = $('[name=nome]').val();
+
+                const email = $('[name=email]').val();
+                const telefone = $('[name=telefone]').val();
+                const textarea = $('textarea#mensagem').val();
+
+                const formularioAlert = $('section.contato .alert');
+                
+                function camposAlert() {
+                    if (nome == "" || email == '' || textarea == "") {
+
+                        formularioAlert.html('Erro:<br/>Preencha os campos obrigatorios!');
+
+                        formularioAlert.css('display','inline-block');
+                        formularioAlert.addClass('alertRed');
+
+                    } else if(nome != '' || email != "" || textarea != "") {
+                        formularioAlert.html('Sucesso<br/> Obrigado(a) por mandar sua duvida.');
+
+                        formularioAlert.css('display','inline-block');
+                        formularioAlert.addClass('alertSucess');
+
+                    }
+
+                    setTimeout(() => {
+                            formularioAlert.css('display','none');
+                        }, 5000);
+                };
+
+                camposAlert();
+
+                return false;
+            });
             
         });
     </script>

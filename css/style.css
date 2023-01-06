@@ -658,11 +658,12 @@ section.contato{
     padding-bottom: 15px;
 }
 
-.form-contato-texto p{
+.form-contato-texto a{
+    text-decoration: none;
     color: #fff !important;
 }
 
-.form-contato-texto p span{
+.form-contato-texto a span{
     color: #0ff;
 }
 
