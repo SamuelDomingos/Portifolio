@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!--Estilos-->
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-
     <link rel="stylesheet" href="css/Alert.css">
 
+    <link rel="stylesheet" href="css/fancybox.css">
+
+    <link href="https://unpkg.com/video.js@7.12.1/dist/video-js.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <!--Estilo Principal-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Portifolio</title>
@@ -123,10 +129,12 @@
             </div>
 
             <div data-aos="fade-up"    data-aos-duration="1500" class="sobre-texto_principal flex">
-                <h1>Ola sou Francisco Samuel Cripim Domingos, tenho 17 anos, com o ensino médio completo, conhecimento em programação, que busca a oportunidade de primeiro trabalho na area da programação Front-End, aonde consiga colocar em pratica todos os meus conhecimentos adquiridos, visando tanto o crescimento pessoal quanto o crescimento da empresa.</h1>
+                <h1>Meu nome é Samuel e sou um jovem programador front-end. Ainda estou no início de minha carreira, mas tenho muita paixão e dedicação pelo desenvolvimento web.
+                <br/><br/> Com apenas 17 anos, já tenho conhecimentos sólidos de HTML, CSS e JavaScript e React, e estou constantemente buscando aprender mais e me atualizar nas tecnologias mais recentes.Acredito que a minha juventude é um trunfo para acompanhar as constantes mudanças do mundo digital e estou animado para começar minha jornada profissional.</h1>
 
                 <div class="sobre-perfil"><img src="images/perfil.jpg" alt="">
                 </div>
+
             </div>
         </div><!--container-->
     </section>
@@ -215,59 +223,239 @@
 
         <div class="trabalhos-projetos center flex flex-wrap">
 
-            <div class="projeto">
-                <img src="images/demonstração.jpg" alt="">
+                <div class="projeto">
 
-                <div class="projeto-icons flex">
+                    <div class="img-demostracao" data-fancybox="costs" data-src="#costs">
+                        <img src="images/Costs/img-1.png" alt="">
 
-                    <i class="fa-brands fa-react"></i>
+                        <div class="projeto-icons">
 
-                    <i class="fa-brands fa-html5"></i>
+                            <h2>Costs</h2>
 
-                    <i class="fa-brands fa-css3-alt"></i>
+                            <div class="flex">
+                                <i class="fa-brands fa-react"></i>
+    
+                                <i class="fa-brands fa-html5"></i>
+    
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+    
+                        </div>
+
+                    </div>
+
+                    <div class="container-fancybox" id="costs" style="display:none;">
+
+                        <div class="text">
+                        <h2>Costs</h2>
+                        <p>
+                        Costs é uma aplicação web de gerenciamento financeiro, projetada para ajudar empresas e pessoas a controlarem seus gastos e acompanharem suas finanças de forma eficiente. Com uma interface intuitiva, a aplicação permite a criação de orçamentos, o registro de gastos e a visualização de suas finanças em um só lugar.
+                        <br/><br/>
+                        A aplicação foi construída com React e utiliza o pacote react-router-dom para navegação fácil entre as páginas. Os dados são armazenados em formato JSON, garantindo uma experiência rápida e eficiente para o usuário. Com Costs, você tem acesso a uma solução prática e eficaz para gerenciar suas finanças.
+                        </p>
+
+                        <a target="_blank" href="https://github.com/SamuelDomingos/Costs">REPOSITORIO</a>
+                        </div>
+
+                        <div class="img">
+
+                            <div class="carousel" id="carousel-costs">
+                                
+                                <div class="carousel__slide">
+                                    <img src="images/Costs/img-1.png" alt="">
+                                </div>
+                
+                                <div class="carousel__slide">
+                                    <img src="images/Costs/img-2.png" alt="">
+                                </div>
+                
+                                <div class="carousel__slide">
+                                    <img src="images/Costs/img-3.png" alt="">
+                                </div>
+
+                            </div>  
+
+                        </div>
+                    </div><!--container-fancybox-->
 
                 </div>
-            </div>
 
-            <div class="projeto">
-                <img src="images/demonstração.jpg" alt="">
+                <div class="projeto">
 
-                <div class="projeto-icons flex">
-                    <i class="fa-sharp fa-solid fa-image"></i>
+                    <div class="img-demostracao" data-fancybox="filmes_lib" data-src="#filmes_lib">
+                        <img src="images/Filmes_Lib/img-1.png" alt="">
+
+                        <div class="projeto-icons">
+
+                            <h2>Filmes_Lab</h2>
+
+                            <div class="flex">
+                                <i class="fa-brands fa-react"></i>
+
+                                <i class="fa-brands fa-html5"></i>
+
+                                <i class="fa-brands fa-css3-alt"></i>
+
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+    
+                        </div>
+
+                    </div>
+                    
+                    <div class="container-fancybox" id="filmes_lib" style="display:none;">
+
+                        <div class="text">
+                        <h2>FilmesLab</h2>
+                            <p>
+                                Filmes_lib é uma plataforma web que apresenta cartazes de filmes e suas avaliações. Com ele, é possível descobrir novos filmes, ler resenhas e verificar suas classificações. Utilizando a API do TMDB, temos acesso a uma grande variedade de filmes e informações atualizadas.
+                                <br/><br/>
+                                O aplicativo foi desenvolvido com React, que é uma biblioteca JavaScript para a construção de interfaces de usuário. Além disso, foi utilizado o Vite para o gerenciamento de pacotes e otimização de desempenho. Juntos, estes dois frameworks garantem uma experiência de usuário rápida e fluida.
+                                <br/><br/>
+                                O projeto é perfeito para os amantes de filmes que desejam descobrir novas produções e ler avaliações antes de assistir. Além disso, é uma ótima opção para quem busca uma plataforma confiável e atualizada para obter informações sobre filmes. Com a API do TMDB, você pode ter certeza de que as informações apresentadas são precisas e atualizadas.
+                            </p>
+
+                            <a target="_blank" href="https://github.com/SamuelDomingos/FilmesLab">REPOSITORIO</a>
+                        </div>
+
+                        <div class="img">
+
+                            <div class="carousel" id="carousel-filmes_lib">
+                                
+                                <div class="carousel__slide">
+                                    <img src="images/Filmes_Lib/img-5.png" alt="">
+                                </div>
+                
+                                <div class="carousel__slide">
+                                    <img src="images/Filmes_Lib/img-2.png" alt="">
+                                </div>
+                
+                                <div class="carousel__slide">
+                                    <img src="images/Filmes_Lib/img-3.png" alt="">
+                                </div>
+
+                                <div class="carousel__slide">
+                                    <img src="images/Filmes_Lib/img-4.png" alt="">
+                                </div>
+
+                            </div>  
+
+                        </div>
+                    </div><!--container-fancybox-->
+
                 </div>
-            </div>
 
-            <div class="projeto">
-                <img src="images/demonstração.jpg" alt="">
+                <div class="projeto">
 
-                <div class="projeto-icons flex">
-                    <i class="fa-sharp fa-solid fa-image"></i>
+                    <div class="img-demostracao" data-fancybox="Secret_Word" data-src="#secret_word">
+                        <img src="images/Secret Word/img-2.png">
+
+                        <div class="projeto-icons">
+
+                            <h2>Secret Word</h2>
+
+                            <div class="flex">
+                                <i class="fa-brands fa-react"></i>
+
+                                <i class="fa-brands fa-html5"></i>
+
+                                <i class="fa-brands fa-css3-alt"></i>
+
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+    
+                        </div>
+
+                    </div>
+                    
+                    <div class="container-fancybox" id="secret_word" style="display:none;">
+
+                        <div class="text">
+                        <h2>Secret Word</h2>
+                            <p>
+                                Secret Word é um jogo divertido e desafiante que coloca suas habilidades de dedução à prova. O objetivo é descobrir a palavra escondida através de uma dica e uma sequência de pontuação. Com a sua interface intuitiva, o jogo é fácil de jogar e ainda mais divertido de jogar com amigos e familiares.
+                                <br/><br/>
+                                Desenvolvido com React, Secret Word é rápido, responsivo e garante uma experiência de jogo suave. O código é bem escrito e organizado, garantindo que o jogo tenha uma boa performance. Além disso, o design é limpo e atrativo, tornando o jogo agradável aos olhos. Se você está procurando por uma forma divertida de passar o tempo e testar suas habilidades, o Secret Word é o jogo perfeito para você!
+                            </p>
+
+                            <a target="_blank" href="https://github.com/SamuelDomingos/Secret_Word">REPOSITORIO</a>
+                        </div>
+
+                        <div class="img">
+
+                            <div class="carousel" id="carousel-secret_word">
+                                
+                                <div class="carousel__slide">
+                                    <img src="images/Secret Word/img-1.png" alt="">
+                                </div>
+                
+                                <div class="carousel__slide">
+                                    <img src="images/Secret Word/img-2.png" alt="">
+                                </div>
+                
+                                <div class="carousel__slide">
+                                    <img src="images/Secret Word/img-3.png" alt="">
+                                </div>
+
+                            </div>  
+
+                        </div>
+                    </div><!--container-fancybox-->
+
                 </div>
-            </div>
 
-            <div class="projeto">
-                <img src="images/demonstração.jpg" alt="">
+                <div class="projeto">
 
-                <div class="projeto-icons flex">
-                    <i class="fa-sharp fa-solid fa-image"></i>
+                    <div class="img-demostracao" data-fancybox="bloco_tarefas" data-src="#bloco_tarefas">
+                        <img src="images/Bloco de notas/img-1.png"> 
+
+                        <div class="projeto-icons">
+
+                            <h2>Bloco de Tarefas</h2>
+
+                            <div class="flex">
+                                <i class="fa-brands fa-react"></i>
+
+                                <i class="fa-brands fa-html5"></i>
+
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+    
+                        </div>
+
+                    </div>
+                    
+                    <div class="container-fancybox" id="bloco_tarefas" style="display:none;">
+
+                        <div class="text">
+                        <h2>Bloco de tarefas</h2>
+                            <p>
+                                O projeto Bloco de Tarefas é uma aplicação web desenvolvida com React, que tem como objetivo ajudar na organização de suas tarefas diárias. Ele permite que você anote suas tarefas, prevê o tempo que cada uma irá durar e mantém um registro se já foi concluída. Com a utilização do JSON Server, as informações são armazenadas de forma eficiente e acessíveis. Assim, você pode manter o controle de suas tarefas e garantir que elas sejam concluídas dentro do prazo.
+                            </p>
+
+                            <a target="_blank" href="https://github.com/SamuelDomingos/bloco-de-tarefas">REPOSITORIO</a>
+                        </div>
+
+                        <div class="img">
+
+                            <div class="carousel" id="carousel-bloco_tarefas">
+                                
+                                <div class="carousel__slide">
+                                    <img src="images/Bloco de notas/img-1.png" alt="">
+                                </div>
+
+                                <div class="carousel__slide">
+                                    <video class="video-js my-video" controls preload="auto">
+                                        <source src="images/Bloco de notas/Bloco_de_notas.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                            </div>  
+
+                        </div>
+                    </div><!--container-fancybox-->
+
                 </div>
-            </div>
-
-            <div class="projeto">
-                <img src="images/demonstração.jpg" alt="">
-
-                <div class="projeto-icons flex">
-                    <i class="fa-sharp fa-solid fa-image"></i>
-                </div>
-            </div>
-
-            <div class="projeto">
-                <img src="images/demonstração.jpg" alt="">
-
-                <div class="projeto-icons flex">
-                    <i class="fa-sharp fa-solid fa-image"></i>
-                </div>
-            </div>
 
         </div><!--trabalhos-projetos-->
 
@@ -349,12 +537,25 @@
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="js/aos.js"></script>
-    <script src="js/jquery.countTo.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <!--<script src="js/mediaelement-and-player.min.js"></script>-->
+    <script src="https://unpkg.com/video.js@7.12.1/dist/video.min.js"></script>
 
     <script>
+         var videos = document.querySelectorAll('.video-js');
+        for (var i = 0; i < videos.length; i++) {
+            var player = videojs(videos[i]);
+            player.volume(0);
+            player.muted(true);
+            player.aspectRatio("16:9");
+            player.disablePictureInPicture();
+        }
+
 
         $(document).ready(function(){
             AOS.init();
+
+            //MENU
 
             var button = $(".menu-mobile-container button");
             var buttonI = $(".menu-mobile-container button i");
@@ -383,6 +584,8 @@
                 }
 
             });
+
+            //MENSAGEM DE ERRO - FORMULARIO
 
             $('section.contato form').submit( () => { 
                 const nome = $('[name=nome]').val();
@@ -418,7 +621,16 @@
 
                 return false;
             });
-            
+
+            //FANCYBOX
+
+            const Costs = new Carousel(document.querySelector("#carousel-costs"));
+            const Filmes_lib = new Carousel(document.querySelector("#carousel-filmes_lib"));
+            const Secret_Word = new Carousel(document.querySelector("#carousel-secret_word"));
+            const Bloco_de_tarefas = new Carousel(document.querySelector("#carousel-bloco_tarefas"), {
+                autoplay: true,
+                ratio: 16 / 9,
+            });
         });
     </script>
 
