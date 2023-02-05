@@ -290,7 +290,7 @@ header .container > i{
 
 /********/
 
-section.Sobre .wave{
+.wave{
     background-image: url(../images/wave.svg);
     background-position: center;
     background-size: cover;
@@ -438,7 +438,6 @@ section.conhecimento .conhecimento-titulo{
     max-width: 900px;
     margin: 0 auto;
     flex-direction: initial;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -446,7 +445,7 @@ section.conhecimento .conhecimento-titulo{
 .icons-especialidades i{
     max-width: 200px;
     font-size: 4em;
-    margin: 1em 0;
+    margin: 1em .5rem;
     background-color: #10121f;
     color: #8c52f6;
     padding: .3em .4em;
@@ -457,11 +456,11 @@ section.conhecimento .conhecimento-titulo{
     transform: scale(1.1);
 }
 
-.icons-especialidades i:nth-child(2n){
+.icons-especialidades i:nth-child(odd){
     animation: icons-espe1 4s infinite;
 }
 
-.icons-especialidades i:nth-child(2n-1){
+.icons-especialidades i:nth-child(even){
     animation: icons-espe2 5s infinite;
 }
 
@@ -538,6 +537,7 @@ section.trabalhos .titulo-texto{
 }
 
 .projeto .img-demostracao img{
+    border-radius: 8px;
     transition: 0.5s;
     margin: 0 auto;
     width: 100%;
@@ -584,11 +584,11 @@ section.trabalhos .titulo-texto{
     height: 100%;
     display: flex;
     flex-direction: row;
-    background-color: #0c0636;
-    color: #fff;
+    background-color: #10121f;
+    color: #828282;
 
     --carousel-button-dots: #8c52f6;
-    --carousel-button-color: #5d17eb;
+    --carousel-button-color: #8c52f6;
 }
 
 .text{
@@ -634,11 +634,13 @@ section.trabalhos .titulo-texto{
     display: flex;
     align-items: center;
     width: 100%;
+    height: auto !important;
     padding: 0;
 }
   
 .carousel .carousel__slide img{
-    width: 100% !important;
+    width: 100%;
+    height: 100%;
 }
 
 .carousel__dot{
@@ -649,7 +651,7 @@ section.trabalhos .titulo-texto{
     width: 100% !important;
     height: 100% !important;
     color: #5d17eb;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 .vjs-big-play-button{
@@ -659,6 +661,16 @@ section.trabalhos .titulo-texto{
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
+}
+
+.vjs-mouse-display .vjs-time-tooltip{
+    background-color: #5e17ebc2 !important;
+    font-weight: bold;
+}
+
+.video-js .vjs-time-tooltip{
+    background-color: #8b52f6b1 !important;
+    font-weight: bold;
 }
 
 .video-js .vjs-control:focus, .video-js .vjs-control:focus:before, .video-js .vjs-control:hover:before{
@@ -711,128 +723,51 @@ section.trabalhos .titulo-texto{
 
 /********/
 
+.contato-icons{
+    width: 100%;
+    justify-content: center !important;
+    margin-top: 3rem;
+}
+
+.contato-icons a.single-contato{
+    text-decoration: none;
+    margin: 1rem 1.5rem;
+}
+
+.contato-icons a.single-contato i{
+    font-size: 2rem;
+    background-color: #20243f98;
+    color: #5d17eb;
+    padding: 1.2rem;
+    transition: 0.4s;
+}
+
+.contato-icons a.single-contato:hover i{
+    transform: scale(1.1);
+}
+
+.contato-icons a.single-contato:nth-child(odd) i{
+    animation: icons-espe1 4s infinite;
+}
+
+.contato-icons a.single-contato:nth-child(even) i{
+    animation: icons-espe2 5s infinite;
+}
+
+.contato-icons a.single-contato h2{
+    color: #828282;
+    font-size: 1em;
+}
+
+.contato-icons a.single-contato p{
+    color: #fff;
+    margin: 1rem 0 .5rem 0;
+}
+
 section.contato{
     background-color: #10121f;
     padding: 8em 0;
     text-align: center;
-}
-
-.form{
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 3em;
-}
-
-.form form{
-    width: 60%;
-    height: 100%;
-    float: left;
-    padding: 20px;
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.form form h2{
-    color: #fff;
-    font-size: 1.3em;
-    padding: 10px 0;
-}
-
-.form form input{
-    width: 100%;
-    height: 50px;
-    font-size: 1em;
-    padding: 0 10px;
-    margin: 20px 0;
-    background: transparent;
-    outline: none;
-    border: 0;
-    color: #fff;
-    border-bottom: 1px solid rgb(86, 86, 86);
-    transition: 0.2s;
-}
-
-.form form textarea{
-    width: 100%;
-    height: 200px;
-    font-size: 1em;
-    padding: 10px;
-    resize: none;
-    background: transparent;
-    outline: none;
-    border: 0;
-    color: #fff;
-    border-bottom: 1px solid rgb(86, 86, 86);
-    transition: 0.2s;
-}
-
-.form form input[type=submit]{
-    background-color: #8c52f6;
-    border: 0;
-    color: #fff;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.form form input[type=submit]:hover{
-    background-color: #5d17eb;
-}
-
-.form form input:focus,
-.form form textarea:focus{
-    border-bottom: 1px solid #8c52f6;
-}
-
-.form .form-contato{
-    text-align: left;
-    width: 40%;
-    padding: 20px;
-    background-color: #5d17eb;
-}
-
-.form .form-contato > h1{
-    color: #fff;
-    font-size: 1.3em;
-    padding: 10px 0;
-}
-
-.form .form-contato .form-contato-texto{
-    margin: 3em 0;
-}
-
-.form-contato-texto h1{
-    color: #0ff;
-    padding-bottom: 15px;
-}
-
-.form-contato-texto a{
-    text-decoration: none;
-    color: #fff !important;
-}
-
-.form-contato-texto a span{
-    color: #0ff;
-}
-
-.form .form-contato-link{
-    margin-top: 70%;
-    text-align: center;
-}
-
-.form-contato-link a i{
-    font-size: 1.5em;
-    color: #0ff;
-    transition: 0.2s;
-}
-
-.form-contato-link a i:hover{
-    transform: scale(1.2);
-}
-
-.form-contato-link a{
-    margin: 0 10px;
-    text-decoration: none;
 }
 
 footer{
@@ -890,6 +825,10 @@ footer .direto-autoral p span{
         text-align: center;
         margin: 0 auto;
     }
+
+    .conhecimento-especialidades .icons-especialidades{
+        flex-wrap: wrap;
+    }
     
     .icons-especialidades i{
         flex: 30%;
@@ -918,15 +857,18 @@ footer .direto-autoral p span{
         flex-direction: row;
     }
 
-    /********/
+    .container-fancybox{
+        height: auto;
+        flex-direction:column;
+    }
 
-    .form form,
-    .form .form-contato{
+    .text{
         width: 100%;
     }
 
-    .form .form-contato-link{
-        margin-top: 0;
+    .img{
+        margin-top: 1.2rem;
+        width: 100%;
     }
 }
 
