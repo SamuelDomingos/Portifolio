@@ -572,6 +572,20 @@ section.trabalhos .titulo-texto{
     margin: 0 .3rem;
 }
 
+.fa-s{
+    background-color: #8c52f6;
+    border-radius: 2px;
+    font-size: 1.1em !important;
+    color: #fff !important;
+    padding: .3rem;
+}
+
+.projeto .projeto-icons ion-icon{
+    font-size: 1.8em;
+    color: #8c52f6;
+    margin: 0 .3rem;
+}
+
 .hidden{
     display: none;
 }
@@ -580,8 +594,9 @@ section.trabalhos .titulo-texto{
 
 .container-fancybox{
     border-radius: 10px;
-    padding: 1rem;
-    height: 100%;
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+    height: auto;
     display: flex;
     flex-direction: row;
     background-color: #10121f;
@@ -595,6 +610,10 @@ section.trabalhos .titulo-texto{
     flex: 50%;
 }
 
+.text > .flex{
+    justify-content: start;
+}
+
 .text h2{
     color: #0ff;
     font-size: 2.5rem;
@@ -606,9 +625,17 @@ section.trabalhos .titulo-texto{
     margin-bottom: 1.5rem;
 }
 
+.text p span{
+    color: #8c52f6;
+}
+
 .text a{
+    width: max-content;
+    text-transform: uppercase;
     text-decoration: none;
     color: #Fff;
+    margin: 0 1rem;
+    margin-top: 1rem;
     padding: .5rem .8rem;
     border-radius: 20px;
     transition: 0.5s;
@@ -617,7 +644,7 @@ section.trabalhos .titulo-texto{
 }
 
 .text a:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .img{
@@ -880,6 +907,12 @@ footer .direto-autoral p span{
 
     .icons-especialidades i{
         flex: 35%;
+    }
+
+    .text a{
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 1rem;
     }
 
 }
