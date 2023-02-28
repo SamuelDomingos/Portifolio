@@ -443,13 +443,17 @@ section.conhecimento .conhecimento-titulo{
 }
 
 .icons-especialidades i{
-    max-width: 200px;
     font-size: 4em;
     margin: 1em .5rem;
     background-color: #10121f;
     color: #8c52f6;
     padding: .3em .4em;
     transition: 0.5s;
+}
+
+.icons-especialidades i img{
+    width: 70px;
+    height: 70px;
 }
 
 .icons-especialidades i:hover{

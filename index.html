@@ -203,7 +203,7 @@
 
                         <i class="fa-brands fa-sass"></i>
 
-                        <i class=""><img src="https://icongr.am/devicon/jquery-plain.svg?size=70&color=8c52f6" alt=""></i>
+                        <i class=""><img src="images/icons8-jquery.svg" alt=""></i>
 
 
                 </div>
@@ -222,6 +222,78 @@
         </div><!--titulo-texto-->
 
         <div class="trabalhos-projetos center flex flex-wrap">
+
+            <div class="projeto">
+
+                <div class="img-demostracao" data-fancybox="miniblog" data-src="#miniblog">
+                    <img src="images/MiniBlog/img5.png"> 
+
+                    <div class="projeto-icons">
+
+                        <h2>MiniBlog</h2>
+
+                        <div class="flex">
+                            <i class="fa-brands fa-react"></i>
+                            <ion-icon name="logo-firebase"></ion-icon>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div class="container-fancybox" id="miniblog" style="display:none;">
+
+                    <div class="text">
+                    <h2>MiniBlog</h2>
+
+                        <p>
+                            Olá, eu sou o Samuel e estou animado em apresentar meu projeto mais recente: o <span>MiniBlog!</span> 
+                            <br/><br/>
+                            Este projeto, construído em <span>React</span> e utilizando <span>Firebase</span> para gerenciar <span>contas e posts</span>, me levou cerca de uma semana para ser concluído. Com o <span>MiniBlog</span> de Estudos, você pode criar uma conta personalizada para postar sobre qualquer assunto, seja acadêmico ou apenas para compartilhar suas ideias. E o melhor de tudo, você pode fazer tudo isso de forma rápida e fácil! O MiniBlog permite que você crie, edite e exclua posts com facilidade. Além disso, você também pode visualizar todos os seus posts em uma página personalizada.
+                        </p>
+
+                        <div class="flex">
+                            <a target="_blank" href="https://github.com/SamuelDomingos/MiniBlog">REPOSITORIO</a>
+                            <a target="_blank" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7036147734319382528/">Post Linkedin</a>
+                        </div>
+                    </div>
+
+                    <div class="img">
+
+                        <div class="carousel" id="carousel-MiniBlog">
+
+                            <div class="carousel__slide">
+                                <video class="video-js my-video" controls preload="auto">
+                                    <source src="images/MiniBlog/MiniBlog (1).webm" type="video/webm">
+                                </video>
+                            </div>
+
+                            <div class="carousel__slide">
+                                <img src="images/MiniBlog/img1.png" alt="">
+                            </div>
+
+                            <div class="carousel__slide">
+                                <img src="images/MiniBlog/img2.png" alt="">
+                            </div>
+
+                            <div class="carousel__slide">
+                                <img src="images/MiniBlog/img3.png" alt="">
+                            </div>
+
+                            <div class="carousel__slide">
+                                <img src="images/MiniBlog/img4.png" alt="">
+                            </div>
+
+                            <div class="carousel__slide">
+                                <img src="images/MiniBlog/img5.png" alt="">
+                            </div>
+
+                        </div>  
+
+                    </div>
+                </div><!--container-fancybox-->
+
+            </div>
 
                 <div class="projeto">
 
@@ -264,7 +336,7 @@
 
                             <div class="flex">
                                 <a target="_blank" href="https://github.com/SamuelDomingos/E-shop">REPOSITORIO</a>
-                                    <a target="_blank" href=https://www.linkedin.com/feed/update/urn:li:activity:7034335879162699776/">Post Linkedin</a>
+                                    <a target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7034335879162699776/">Post Linkedin</a>
 
                             </div>
                         </div>
@@ -929,6 +1001,7 @@
             const InDecor = new Carousel(document.querySelector("#carousel-indecor"));
             const DankiCode = new Carousel(document.querySelector("#carousel-dankicode"));
             const E_shop = new Carousel(document.querySelector("#carousel-e-shop"));
+            const MiniBlog = new Carousel(document.querySelector("#carousel-MiniBlog"));
         });
     </script>
 
