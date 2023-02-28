@@ -525,6 +525,16 @@ section.trabalhos .titulo-texto{
     margin: 2em 1.5em;
 }
 
+.destaque_projetos > h2,
+.outros_projetos > h2{
+    font-size: 2rem;
+    width: max-content;
+    padding-bottom: .5rem;
+    margin-left: 1rem;
+    color: #5d17eb;
+    border-bottom: 3px solid #5d17eb;
+}
+
 .projeto .img-demostracao{
     position: relative;
     max-width: 300px;
