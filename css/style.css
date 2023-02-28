@@ -443,6 +443,7 @@ section.conhecimento .conhecimento-titulo{
 }
 
 .icons-especialidades i{
+    max-width: 200px;
     font-size: 4em;
     margin: 1em .5rem;
     background-color: #10121f;
@@ -523,6 +524,11 @@ section.trabalhos .titulo-texto{
 
 .trabalhos-projetos .projeto{
     margin: 2em 1.5em;
+}
+
+.destaque_projetos .flex,
+.outros_projetos .flex{
+    align-items: center;
 }
 
 .destaque_projetos > h2,
