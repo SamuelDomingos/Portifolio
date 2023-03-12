@@ -23,6 +23,13 @@
     <title>Portifolio</title>
 </head>
 <body>
+
+    <label class="switch">
+        <span class="sun"><i class="fa-solid fa-sun"></i></span>
+        <span class="moon"><i class="fa-solid fa-moon"></i></span>   
+        <input type="checkbox" class="input">
+        <span class="slider"></span>
+      </label>
     
     <header>
         <div class="container">
@@ -124,7 +131,7 @@
 
             <div data-aos="fade-up"    data-aos-duration="1500" class="sobre-titulo">
                 <p>Olá,</p>
-                <h1>Eu sou Samuel</h1>
+                <h1 class="titlo">Eu sou Samuel</h1>
                 <div class="bottom-border"></div>
             </div>
 
@@ -144,7 +151,7 @@
 
             <div data-aos="fade-up"    data-aos-duration="1500" class="conhecimento-titulo">
                 <p>Conhecimento que tenho</p>
-                <h1>O projeto que você precisa para lançar e expandir seus negócios</h1>
+                <h1 class="titlo">O projeto que você precisa para lançar e expandir seus negócios</h1>
                 <div class="bottom-border"></div>
             </div>
 
@@ -217,7 +224,7 @@
         <div class="titulo-texto">
             <div class="container">
                 <p>Trabalhos Recentes,</p>
-                <h1>Confirar alguns dos meus trabalhos</h1>
+                <h1 class="titlo">Confirar alguns dos meus trabalhos</h1>
             </div>
         </div><!--titulo-texto-->
 
@@ -381,6 +388,68 @@
                                 </div>
                             </div><!--container-fancybox-->
         
+                        </div>
+
+                        <div class="projeto">
+
+                            <div class="img-demostracao" data-fancybox="weather" data-src="#weather">
+                                <img src="images/weather/img1.png"> 
+            
+                                <div class="projeto-icons">
+            
+                                    <h2>Weather-app</h2>
+            
+                                    <div class="flex">
+                                        <i class="fa-brands fa-react"></i>
+                                        <i class="fa-solid fa-bolt"></i>
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+                            
+                            <div class="container-fancybox" id="weather" style="display:none;">
+            
+                                <div class="text">
+                                <h2>Weather-app</h2>
+            
+                                    <p>
+                                        O Weather-App é um projeto que permite visualizar informações detalhadas sobre o clima de qualquer região. Utilizando tecnologias como <span>React, Vite e a API WeatherAPI </span>, o aplicativo mostra os dados do clima do dia e dos próximos 5 dias, incluindo informações como <span>temperatura, velocidade do vento, umidade, visibilidade e pressão do ar</span>. Além disso, é possível obter a localização atual em <span>tempo real</span>, tornando a experiência ainda mais personalizada e prática, e tudo isso feito em apenas em um <span>unico dia</span>. Com esse projeto, pude aprimorar minhas habilidades em front-end e desenvolvimento de APIs. Totalmente em portugues.
+                                    </p>
+            
+                                    <div class="flex">
+                                        <a target="_blank" href="https://github.com/SamuelDomingos/Weather-app">REPOSITORIO</a>
+                                        <a target="_blank" href="https://weather-app0202.netlify.app/">Ver Site</a>
+                                    </div>
+                                </div>
+            
+                                <div class="img">
+            
+                                    <div class="carousel" id="carousel-weather">
+            
+                                        <div class="carousel__slide">
+                                            <video class="video-js my-video" controls preload="auto">
+                                                <source src="images/weather/Weather-app.webm" type="video/webm">
+                                            </video>
+                                        </div>
+            
+                                        <div class="carousel__slide">
+                                            <img src="images/weather/img1.png" alt="">
+                                        </div>
+            
+                                        <div class="carousel__slide">
+                                            <img src="images/weather/img2.png" alt="">
+                                        </div>
+            
+                                        <div class="carousel__slide">
+                                            <img src="images/weather/img3.png" alt="">
+                                        </div>
+            
+                                    </div>  
+            
+                                </div>
+                            </div><!--container-fancybox-->
+            
                         </div>
         
                         <div class="projeto">
@@ -649,7 +718,7 @@
                             <div class="container-fancybox" id="pokedex" style="display:none;">
         
                                 <div class="text">
-                                <h2>Podedex</h2>
+                                <h2>Pokedex</h2>
                                     <p>
                                         O projeto Bloco de Tarefas é uma aplicação web desenvolvida com React, que tem como objetivo ajudar na organização de suas tarefas diárias. Ele permite que você anote suas tarefas, prevê o tempo que cada uma irá durar e mantém um registro se já foi concluída. Com a utilização do JSON Server, as informações são armazenadas de forma eficiente e acessíveis. Assim, você pode manter o controle de suas tarefas e garantir que elas sejam concluídas dentro do prazo.
                                     </p>
@@ -869,7 +938,7 @@
             <div class="titulo-texto">
                 <div class="container">
                     <p>Contato</p>
-                    <h1>Mande um oi :)</h1>
+                    <h1 class="titlo">Mande um oi :)</h1>
                 </div>
             </div>
 
@@ -903,7 +972,7 @@
     </section>
 
     <footer>
-        <div class="wave"></div>
+        <div class="wave2"></div>
         <div class="container flex">
 
             <div class="logo-menu">
@@ -926,7 +995,8 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
-         var videos = document.querySelectorAll('.video-js');
+        var videos = document.querySelectorAll('.video-js');
+
         for (var i = 0; i < videos.length; i++) {
             var player = videojs(videos[i]);
             player.volume(0);
@@ -938,6 +1008,46 @@
 
         $(document).ready(function(){
             AOS.init();
+
+            const switchButton = $(".switch input");
+const bodyElement = $("body");
+const cardSevice = $(".conhecimento-tecnologias .conhecimentos-icons .w3");
+const backgroundColor = $(".icons-especialidades i");
+
+const colors = {
+  white: "var(--colorWhite)",
+  black: "#000",
+  color1: "var(--color1)",
+  color2: "var(--color2)",
+  color3: "var(--color3)",
+  color4: "var(--color4)"
+};
+
+let isBackgroundWhite = true;
+
+switchButton.click(function () {
+  const bgColor = isBackgroundWhite ? colors.color2 : colors.white;
+  const textColor = isBackgroundWhite ? colors.color4 : colors.color3;
+  const cardBgColor = isBackgroundWhite ? colors.color3 : colors.white;
+  const iconColor = isBackgroundWhite ? colors.white : colors.color3;
+  const cardTextColor = isBackgroundWhite ? colors.white : colors.black;
+  const bgIconColor = isBackgroundWhite ? colors.color3 : colors.color2;
+
+  bodyElement.css("background-color", bgColor);
+  cardSevice.css({
+    "background-color": cardBgColor,
+    color: cardTextColor
+  });
+  backgroundColor.css({
+    "background-color": bgIconColor,
+    color: iconColor
+  });
+
+  $("section.conhecimento .container .conhecimento-titulo h1").css("color", textColor);
+  cardSevice.find("i").css("color", iconColor);
+
+  isBackgroundWhite = !isBackgroundWhite;
+});
 
             //MENU
 
@@ -1017,6 +1127,7 @@
             const DankiCode = new Carousel(document.querySelector("#carousel-dankicode"));
             const E_shop = new Carousel(document.querySelector("#carousel-e-shop"));
             const MiniBlog = new Carousel(document.querySelector("#carousel-MiniBlog"));
+            const Weather = new Carousel(document.querySelector("#carousel-weather"));
         });
     </script>
 
